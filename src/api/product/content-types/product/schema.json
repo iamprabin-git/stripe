@@ -1,0 +1,80 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 120,
+      "required": true
+    },
+    "Slug": {
+      "type": "uid",
+      "required": true,
+      "minLength": 3,
+      "maxLength": 120
+    },
+    "Description": {
+      "type": "richtext",
+      "required": true
+    },
+    "Image": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "category": {
+      "type": "enumeration",
+      "required": true,
+      "default": "T-shirt",
+      "enum": [
+        "T-shirt",
+        "Pant",
+        "Shoes",
+        "Belt",
+        "Bags"
+      ]
+    },
+    "size": {
+      "type": "string",
+      "required": true
+    },
+    "color": {
+      "type": "enumeration",
+      "required": true,
+      "default": "Red",
+      "enum": [
+        "Red",
+        "Green",
+        "Yellow",
+        "Black",
+        "White",
+        "Blue",
+        "Purple"
+      ]
+    },
+    "AvailableQty": {
+      "type": "integer",
+      "required": true
+    },
+    "price": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}
